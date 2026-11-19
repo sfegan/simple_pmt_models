@@ -43,6 +43,13 @@ def cascaded_pmt_spectrum(lambda_2K, lambda_1_hi, nstage, npmf, lambda_0=None,
     sigma_1_lo : width of the zero-centered Gaussian describing the low-charge
         component of the 1st stage
 
+    e0 : mean offset of the additive Gaussian noise. In electrons when
+        ``electrons_per_dc`` is None, otherwise in digital counts.
+
+    sigma_e : standard deviation of the additive Gaussian noise. In electrons
+        when ``electrons_per_dc`` is None, otherwise in digital counts. Set to
+        None or a non-positive value to disable Gaussian noise.
+
     suppress_zero : suppress events that result in zero output electrons being
         produced after amplification
 
